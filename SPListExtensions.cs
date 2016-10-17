@@ -46,7 +46,7 @@ namespace Microsoft.SharePoint
                                     DisplayName=""{0}"" 
                                     Required=""{8}"" 
                                     ID=""{1}"" 
-                                    SourceID=""{{9d25afb0-179a-4e5c-a07e-d77c04e51e58}}"" 
+                                    SourceID=""{9}"" 
                                     StaticName=""{2}"" 
                                     BaseRenderingType=""Text"" 
                                     Name=""{2}"" 
@@ -76,6 +76,7 @@ namespace Microsoft.SharePoint
                                 , entityNamespace.Replace(".", "%2E") // 6 - namespace in url format
                                 , relatedField // 7
                                 , isRequired.ToString().ToUpper() // 8
+                                , string.Format("{{{0}}}", list.ID) // 9
                             );
 
                             // Add field to list
